@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hagonoy GroundWatch</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav class="nav" aria-label="Sections">
+            <div class="wrap nav__in">
+                <a class="nav__brand" href="#top">Hagonoy GroundWatch</a>
+                <input class="nav__check" type="checkbox" id="nav-toggle" aria-label="Open section menu">
+                <label class="nav__btn" for="nav-toggle">Menu</label>
+                <ul class="nav__list">
+                    <li><a href="#hagonoy">Hagonoy</a></li>
+                    <li><a href="#mechanism">About</a></li>
+                    <li><a href="#causes">Causes</a></li>
+                    <li><a href="#local">Effects</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#map">Map</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#report">Report</a></li>
+                    <li><a href="#sources">References</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="hero wrap" id="top">
+            <p class="eyebrow">Hagonoy GroundWatch</p>
+            <h1>Hagonoy is sinking</h1>
+            <p class="lede">Land subsidence is the slow drop of the ground surface. Pumping groundwater is the largest single cause. In low coastal towns like Hagonoy, Bulacan, a lower ground means more flooding, and squeezed clay does not spring back.</p>
+
+            <div class="panels">
+                <figure class="panel">
+                    <svg viewBox="0 0 440 340" role="img" aria-labelledby="t-before d-before">
+                        <title id="t-before">Ground before pumping</title>
+                        <desc id="d-before">A cross-section with topsoil, a clay layer, a water-filled aquifer and bedrock. A house sits at ground level and a well holds a high water level.</desc>
+                        <defs>
+                            <pattern id="wa" width="14" height="14" patternUnits="userSpaceOnUse">
+                                <circle class="c-water" cx="4" cy="4" r="2.2"/>
+                                <circle class="c-water" cx="11" cy="10" r="2.2"/>
+                            </pattern>
+                        </defs>
+
+                        <rect class="c-sand" x="0" y="70" width="440" height="60"/>
+                        <rect class="c-clay" x="0" y="130" width="440" height="60"/>
+                        <path class="c-line" d="M0 150H440M0 170H440"/>
+                        <rect class="c-sand" x="0" y="190" width="440" height="80"/>
+                        <rect fill="url(#wa)" x="0" y="190" width="440" height="80"/>
+                        <rect class="c-rock" x="0" y="270" width="440" height="70"/>
+                        <rect class="c-pipe" x="322" y="60" width="16" height="212"/>
+                        <rect class="c-water" x="324" y="90" width="12" height="180"/>
+                        <rect class="c-house" x="90" y="42" width="64" height="28"/>
+                        <polygon class="c-roof" points="84,42 122,18 160,42"/>
+                        <rect class="c-roof" x="116" y="54" width="12" height="16"/>
+                        <text class="lbl" x="330" y="50" text-anchor="middle">Well</text>
+                    </svg>
+                    <figcaption>
+                        <p class="tag">Before pumping</p>
+                        <p>Water fills the gaps between grains and carries part of the weight above. The well casing stands close to ground level.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="panel">
+                    <svg viewBox="0 0 440 340" role="img" aria-labelledby="t-after d-after">
+                        <title id="t-after">Ground after years of pumping</title>
+                        <desc id="d-after">The same cross-section after pumping. The water level has fallen, the clay layer is thinner, the ground surface sits lower, the house tilts with a crack and the well casing rises above the ground.</desc>
+                        <defs>
+                            <pattern id="wb" width="14" height="14" patternUnits="userSpaceOnUse">
+                                <circle class="c-water" cx="4" cy="4" r="2.2"/>
+                                <circle class="c-water" cx="11" cy="10" r="2.2"/>
+                            </pattern>
+                            <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path class="c-ah" d="M1 1L9 5L1 9z"/>
+                            </marker>
+                        </defs>
+                        <rect class="c-sand" x="0" y="100" width="440" height="55"/>
+                        <rect class="c-clay" x="0" y="155" width="440" height="35"/>
+                        <path class="c-line" d="M0 167H440M0 179H440"/>
+                        <rect class="c-sand" x="0" y="190" width="440" height="80"/>
+                        <rect fill="url(#wb)" x="0" y="235" width="440" height="35"/>
+                        <rect class="c-rock" x="0" y="270" width="440" height="70"/>
+                        <line class="c-ghost" x1="0" y1="70" x2="440" y2="70"/>
+                        <line class="c-dim" x1="40" y1="72" x2="40" y2="98" marker-end="url(#ar)"/>
+                        <rect class="c-pipe" x="322" y="60" width="16" height="212"/>
+                        <rect class="c-water" x="324" y="240" width="12" height="30"/>
+                        <g transform="translate(0 30) rotate(-4 122 70)">
+                            <rect class="c-house" x="90" y="42" width="64" height="28"/>
+                            <polygon class="c-roof" points="84,42 122,18 160,42"/>
+                            <rect class="c-roof" x="116" y="54" width="12" height="16"/>
+                            <path class="c-crack" d="M140 43L145 51L139 58L145 66"/>
+                        </g>
+                        <text class="lbl lbl--pink" x="8" y="56">Ground drops</text>
+                        <text class="lbl lbl--pink" x="168" y="63">Original ground level</text>
+                        <text class="lbl lbl--pink" x="330" y="50" text-anchor="middle">Pumping</text>
+                    </svg>
+                    <figcaption>
+                        <p class="tag">After years of pumping</p>
+                        <p>The water level falls. Clay layers press together, the surface drops and the well casing rises above the ground.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <ul class="key" aria-label="Layer key">
+                <li><i class="c-sand" style="background:var(--sand)"></i>Topsoil and sand</li>
+                <li><i style="background:var(--clay)"></i>Clay</li>
+                <li><i style="background:var(--sand);box-shadow:inset 0 0 0 3px var(--water)"></i>Aquifer, filled with water</li>
+                <li><i style="background:var(--rock)"></i>Bedrock</li>
+            </ul>
+            <p class="note">Illustrative cross-section, not to scale.</p>
+        </header>
+
+        <main>
+            <!-- ===== NEW: Hagonoy overview ===== -->
+            <section class="sec" id="hagonoy" aria-labelledby="h-hag">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Home: Hagonoy overview</p><h2 id="h-hag">A low town beside the bay</h2></div>
+                        <p>Hagonoy is a coastal town where marsh and river channels meet Manila Bay. Land subsidence lowers the ground, so floods and tides reach further each year.</p>
+                    </div>
+                    <div class="twocol">
+                        <div>
+                            <p>Hagonoy covers 103.10 sq km at the southwest corner of Bulacan and has 26 barangays. Its land is a long ridge of marsh and tributaries that drain to the sea, so it was low and wet even before the ground started to sink.</p>
+                            <p>The municipal engineer has said the town is sinking by about 10 cm a year on top of its natural flood risk. A 2026 study of Hagonoy and Calumpit linked heavy groundwater extraction and urban growth to subsidence there.</p>
+                        </div>
+                        <div class="facts" style="margin-top:0">
+                            <div class="fact"><b>26</b><p>barangays, all classed as urban.</p></div>
+                            <div class="fact"><b>~10 cm</b><p>a year of sinking, as reported by the municipal engineer.</p></div>
+                            <div class="fact"><b>~9 M m³</b><p>of groundwater extracted a year in the study area, linked to about 81 mm a year of subsidence.</p></div>
+                        </div>
+                    </div>
+                    <p class="note">Figures come from the news and research sources listed under References. Rates differ by method, period and location.</p>
+                </div>
+            </section>
+
+            <section class="sec sec--alt" id="mechanism" aria-labelledby="h-how">
+                <div class="wrap">
+                    <div class="head">
+                        <div>
+                            <p class="eyebrow">About land subsidence</p>
+                            <h2 id="h-how">How pumping drops the ground</h2>
+                        </div>
+                        <p>The US Geological Survey calls compaction of aquifer systems by far the single largest cause of subsidence. Four steps explain the diagram above.</p>
+                    </div>
+                    <ol class="steps">
+                        <li>
+                            <span class="n">Step 1</span>
+                            <h3>Water carries load</h3>
+                            <p>Water in the pores of clay and sand pushes back against the weight of the ground above.</p>
+                        </li>
+                        <li>
+                            <span class="n">Step 2</span>
+                            <h3>Wells pull water out</h3>
+                            <p>Farms, factories and households pump faster than the aquifer refills.</p>
+                        </li>
+                        <li>
+                            <span class="n">Step 3</span>
+                            <h3>Clay squeezes</h3>
+                            <p>With less water pressure, the grains pack closer. Clay layers lose the most height.</p>
+                        </li>
+                        <li>
+                            <span class="n">Step 4</span>
+                            <h3>The surface drops</h3>
+                            <p>Roads, pipes and buildings sink with the ground. Compacted clay stays compact. Mexico City's clay is forecast to keep compacting for about 150 years.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="sec" id="exposure" aria-labelledby="h-risk">
+                <div class="wrap">
+                    <div class="head">
+                        <div>
+                            <p class="eyebrow">Exposure</p>
+                            <h2 id="h-risk">Who faces the risk</h2>
+                        </div>
+                        <p>A global subsidence map puts one in five people in zones with a high probability of sinking ground. Each dot below stands for one percent.</p>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="dots" style="--clip: polygon(0 0, 100% 0, 100% 10%, 90% 10%, 90% 20%, 0 20%)" role="img" aria-label="19 of 100 dots filled"><i></i></div>
+                            <p class="num">19<span>%</span></p>
+                            <p>of the world's population lives where subsidence has a high probability.</p>
+                        </div>
+                        <div class="stat">
+                            <div class="dots" style="--clip: polygon(0 0, 100% 0, 100% 10%, 20% 10%, 20% 20%, 0 20%)" role="img" aria-label="12 of 100 dots filled"><i></i></div>
+                            <p class="num">12<span>%</span></p>
+                            <p>of global GDP, about US$8.17 trillion, faces the same exposure.</p>
+                        </div>
+                    </div>
+
+                    <div class="facts">
+                        <div class="fact"><b>80%+</b><p>of identified US subsidence comes from human impact on underground water.</p></div>
+                        <div class="fact"><b>17,000 sq mi</b><p>of land across 45 US states has been directly affected.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec sec--alt" id="causes" aria-labelledby="h-causes">
+                <div class="wrap">
+                    <div class="head">
+                        <div>
+                            <p class="eyebrow">Causes</p>
+                            <h2 id="h-causes">What pulls the ground down</h2>
+                        </div>
+                        <p>Groundwater pumping leads the list. Four processes account for the sinking USGS tracks.</p>
+                    </div>
+                    <dl class="ledger">
+                        <div>
+                            <dt>Groundwater pumping</dt>
+                            <dd>Aquifer compaction is by far the single largest cause. The pumped water leaves, and the clay above and between the sand layers settles into the space.</dd>
+                        </div>
+                        <div>
+                            <dt>Drained peat and wet soils</dt>
+                            <dd>Drained organic soil decomposes and shrinks. Some wetlands lose 1 to 3 inches (2.5 to 7.5 cm) a year.</dd>
+                        </div>
+                        <div>
+                            <dt>Collapsing rock</dt>
+                            <dd>Water dissolves salt and gypsum underground, and the roof of the cavity falls in. Dropping groundwater levels often trigger the collapse. Rocks of this type sit under 35 to 40 percent of the United States.</dd>
+                        </div>
+                        <div>
+                            <dt>Mines, thaw and settling</dt>
+                            <dd>Underground mining, thawing permafrost, hydrocompaction and natural compaction complete the list.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- ===== NEW: Causes and effects in Hagonoy ===== -->
+            <section class="sec" id="local" aria-labelledby="h-loc">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Causes and effects in Hagonoy</p><h2 id="h-loc">Pumping, flooding, broken structures</h2></div>
+                        <p>Three linked problems. Each one makes the next worse.</p>
+                    </div>
+                    <div class="cols3">
+                        <div><h3>Groundwater extraction</h3><p>Wells serve homes, fish farms and businesses. When pumping outpaces refill, clay layers compact and the surface drops. The ISPRS study ties Hagonoy's extraction volume to measurable sinking.</p></div>
+                        <div><h3>Flooding</h3><p>A lower town is a bigger basin. Regular high tides, backwater from Manila Bay and river overflow now cover land that used to stay dry, and some areas stay under water for long periods after typhoons and monsoon rains.</p></div>
+                        <div><h3>Infrastructure damage</h3><p>Roads, dikes and foundations settle unevenly and crack. Raising roads alone has been reported to push water into lower neighbouring areas, and several flood control works have been questioned for poor quality.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec sec--alt" id="speed" aria-labelledby="h-rate">
+                <div class="wrap">
+                    <div class="head">
+                        <div>
+                            <p class="eyebrow">Speed</p>
+                            <h2 id="h-rate">Mexico City sinks 8 to 14 times faster</h2>
+                        </div>
+                        <p>Rates in centimeters per year, drawn to one scale. Each source measured a different period.</p>
+                    </div>
+
+                    <div class="rates">
+                        <div class="rate rate--axis" aria-hidden="true">
+                            <span></span>
+                            <div class="axis">
+                                <span style="--p:0">0</span>
+                                <span style="--p:20">10</span>
+                                <span style="--p:40">20</span>
+                                <span style="--p:60">30</span>
+                                <span style="--p:80">40</span>
+                                <span style="--p:100">50 cm a year</span>
+                            </div>
+                        </div>
+                        <div class="rate">
+                            <div>
+                                <p class="rate__name">Mexico City</p>
+                                <p class="rate__meta">Almost 50 cm a year</p>
+                            </div>
+                            <div class="track" role="img" aria-label="Almost 50 centimeters a year"><span class="bar" style="--v:49"></span></div>
+                        </div>
+                        <div class="rate">
+                            <div>
+                                <p class="rate__name">Bulacan and Pampanga</p>
+                                <p class="rate__meta">4 to 6 cm a year since 2003</p>
+                            </div>
+                            <div class="track" role="img" aria-label="4 to 6 centimeters a year"><span class="bar bar--range" style="--v:6"></span></div>
+                        </div>
+                        <div class="rate">
+                            <div>
+                                <p class="rate__name">Jakarta</p>
+                                <p class="rate__meta">3.5 cm a year, citywide average</p>
+                            </div>
+                            <div class="track" role="img" aria-label="3.5 centimeters a year"><span class="bar" style="--v:3.5"></span></div>
+                        </div>
+                    </div>
+                    <p class="rates-note">Mexico City's rate comes from clay-rich sediment of the drained Lake Texcoco bed, which repacks more tightly. Jakarta's average hides large local gaps, and the north sinks fastest.</p>
+                </div>
+            </section>
+
+            <section class="sec" id="depth" aria-labelledby="h-depth">
+                <div class="wrap">
+                    <div class="head">
+                        <div>
+                            <p class="eyebrow">Depth</p>
+                            <h2 id="h-depth">How far the ground has dropped</h2>
+                        </div>
+                        <p>Total loss at four worst-hit spots. Each bar hangs below the old ground line and uses the same meter scale.</p>
+                    </div>
+
+                    <div class="depth">
+                        <div class="depth__ruler" aria-hidden="true">
+                            <span style="--n:0">0 m</span>
+                            <span style="--n:2">2</span>
+                            <span style="--n:4">4</span>
+                            <span style="--n:6">6</span>
+                            <span style="--n:8">8</span>
+                        </div>
+                        <div class="depth__grid" aria-hidden="true"></div>
+                        <div class="depth__ground" aria-hidden="true"></div>
+
+                        <div class="depth__item">
+                            <div class="depth__label"><p class="depth__val">9<small>m</small></p><p class="depth__name">San Joaquin Valley</p></div>
+                            <div class="depth__bar" style="--m:9.1" role="img" aria-label="Nearly 9 meters"></div>
+                        </div>
+                        <div class="depth__item">
+                            <div class="depth__label"><p class="depth__val">4.6<small>m</small></p><p class="depth__name">Tokyo, Koto-ku</p></div>
+                            <div class="depth__bar" style="--m:4.6" role="img" aria-label="4.6 meters"></div>
+                        </div>
+                        <div class="depth__item">
+                            <div class="depth__label"><p class="depth__val">4<small>m</small></p><p class="depth__name">North Jakarta</p></div>
+                            <div class="depth__bar" style="--m:4" role="img" aria-label="4 meters"></div>
+                        </div>
+                        <div class="depth__item">
+                            <div class="depth__label"><p class="depth__val">1.5 to 2.1<small>m</small></p><p class="depth__name">Houston, Greens Bayou</p></div>
+                            <div class="depth__bar depth__bar--range" style="--m:2.1" role="img" aria-label="1.5 to 2.1 meters"></div>
+                        </div>
+                    </div>
+
+                    <ul class="depth-notes">
+                        <li><b>San Joaquin Valley:</b> in some places the surface sat nearly 30 feet higher less than 75 years ago.</li>
+                        <li><b>Tokyo:</b> the deepest point, at Minamisuna, reached 4.6 m.</li>
+                        <li><b>North Jakarta:</b> up to 4 m over the past four decades.</li>
+                        <li><b>Houston:</b> 5 to 7 feet around Greens Bayou. The lighter segment shows the range.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="sec sec--alt" id="philippines" aria-labelledby="h-ph">
+                <div class="wrap">
+                    <p class="eyebrow">Case: Philippines</p>
+                    <div class="case">
+                        <div class="staff" role="img" aria-label="A measuring staff from 0 to 100 centimeters with a band from 64 to 96 centimeters">
+                            <div class="staff__ticks" aria-hidden="true">
+                                <span style="--c:0">0</span><span style="--c:20">20</span><span style="--c:40">40</span><span style="--c:60">60</span><span style="--c:80">80</span><span style="--c:100">100</span>
+                            </div>
+                            <div class="staff__rod"></div>
+                            <div class="staff__band"><i></i></div>
+                            <div class="staff__txt" aria-hidden="true">
+                                <span class="a">2003 ground</span>
+                                <span class="b">64 to 96 cm<br>by 2019</span>
+                            </div>
+                        </div>
+                        <div class="case-body">
+                            <h2 id="h-ph">Bulacan and Pampanga</h2>
+                            <p class="big">4 to 6<small>cm a year</small></p>
+                            <p>Satellite monitoring shows both provinces sinking at this rate since 2003. Over the 16 years to 2019, the reported rate adds up to 64 to 96 cm.</p>
+                            <p>Bay water now floods coastal towns and islets north of Manila. In Sitio Pariahan, Bulakan, the flooding has displaced residents. The reported cause is groundwater pumped through unregulated wells for homes, factories and farms. Sections of Manila along the bay sink more slowly, and the source gives no figure for them.</p>
+                            <p class="note">Figures from a 2019 AFP report.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec" id="effects" aria-labelledby="h-fx">
+                <div class="wrap">
+                    <div class="head">
+                        <div>
+                            <p class="eyebrow">Effects</p>
+                            <h2 id="h-fx">What sinking costs</h2>
+                        </div>
+                    </div>
+                    <div class="effects">
+                        <div class="effects__lead">
+                            <p class="big">40<small>%</small></p>
+                            <h3 style="margin-top:.6rem">Of Jakarta sits below sea level</h3>
+                            <p>The north dropped as much as 4 m in four decades. Pumping and heavy construction drive the sinking, and piped water does not reach everyone, so residents keep drilling wells.</p>
+                        </div>
+                        <div class="effects__more">
+                            <div>
+                                <h3>Broken structures</h3>
+                                <p>Ground sinks unevenly, so foundations crack, roads buckle and pipes pull apart. Well casings rise out of the surface, as the diagram shows.</p>
+                            </div>
+                            <div>
+                                <h3>Lost storage</h3>
+                                <p>Compacted clay holds less water, so the aquifer keeps a smaller volume even after pumping stops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== NEW: Community impact ===== -->
+            <section class="sec sec--alt" id="community" aria-labelledby="h-com">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Community impact</p><h2 id="h-com">Daily life on sinking ground</h2></div>
+                        <p>The effects reach homes, work, health and even burial grounds.</p>
+                    </div>
+                    <div class="cols3">
+                        <div><h3>Livelihood</h3><p>A farmer interviewed by GMA said land he used to till has turned into swamp. Fishponds and farms near the bay are the most exposed.</p></div>
+                        <div><h3>Homes and safety</h3><p>Residents describe chest-high floodwater and living on upper floors. Wading through dirty floodwater raises the risk of skin infections and leptospirosis.</p></div>
+                        <div><h3>Heritage and burial</h3><p>Two cemeteries in Barangay San Sebastian were reported to stay submerged by tidal floods nearly all year, and families move remains to higher ground.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== NEW: Interactive map ===== -->
+            <section class="sec" id="map" aria-labelledby="h-map">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Interactive map</p><h2 id="h-map">Where to look first</h2></div>
+                        <p>Select a barangay to centre the Google Map on it. These areas are named in news and research on flooding and subsidence in Hagonoy.</p>
+                    </div>
+                    <div class="mapbox">
+                        <iframe id="map-frame" title="Map of Hagonoy, Bulacan" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=Hagonoy,+Bulacan,+Philippines&z=12&output=embed"></iframe>
+                        <ul class="spots">
+                            <li><button aria-pressed="false" data-q="San Sebastian"><b>San Sebastian</b>Cemeteries and homes under tidal floods</button></li>
+                            <li><button aria-pressed="false" data-q="San Nicolas"><b>San Nicolas</b>Bayside area near the old lake called Wawa</button></li>
+                            <li><button aria-pressed="false" data-q="Malis"><b>Malis</b>River barangay with farmland turning to swamp</button></li>
+                            <li><button aria-pressed="false" data-q="Bulusan"><b>Bulusan</b>River protection works under scrutiny</button></li>
+                            <li><button aria-pressed="false" data-q="Frances"><b>Frances</b>Flood structure reported to fail in back-flooding</button></li>
+                            <li><button aria-pressed="false" data-q="Santo Niño"><b>Santo Niño (Poblacion)</b>Memorial park flooded by tides</button></li>
+                        </ul>
+                    </div>
+                    <p class="note">Not an official hazard map. For official hazard data, check the Hagonoy MDRRMO, NAMRIA and Project NOAH.</p>
+                </div>
+            </section>
+
+            <section class="sec sec--alt" id="response" aria-labelledby="h-fix">
+                <div class="wrap">
+                    <div class="response">
+                        <div>
+                            <p class="eyebrow">Response</p>
+                            <h2 id="h-fix">What worked in Tokyo</h2>
+                            <p style="margin-top:1.25rem;color:var(--muted);max-width:30rem">Tokyo sank as much as 4.6 m. The city then restricted groundwater use over two decades and gave industry river water instead.</p>
+                            <ol class="tl">
+                                <li><time>1950</time><p>Tokyo starts restricting groundwater use.</p></li>
+                                <li><time>1953</time><p>A Land Subsidence Prevention Council forms.</p></li>
+                                <li><time>1956</time><p>The Law of Groundwater Usage for Industry takes effect.</p></li>
+                                <li><time>1962</time><p>A building water law takes effect and the industrial water law is revised.</p></li>
+                                <li><time>1964</time><p>River water and other alternative sources start reaching industry.</p></li>
+                                <li><time>1970</time><p>The restrictions apply in full and groundwater use stops completely.</p></li>
+                            </ol>
+                        </div>
+                        <div>
+                            <p class="eyebrow">Tools for any city</p>
+                            <div class="moves">
+                                <div>
+                                    <h3>Measure from orbit</h3>
+                                    <p>Satellite radar (InSAR) maps ground movement at 80 m by 80 m detail with sub-centimeter precision.</p>
+                                </div>
+                                <div>
+                                    <h3>License and meter wells</h3>
+                                    <p>Unregulated wells supply homes, factories and farms near Manila Bay. Permits and meters show who pumps how much.</p>
+                                </div>
+                                <div>
+                                    <h3>Pipe in surface water</h3>
+                                    <p>Tokyo moved industry onto river water by 1964. Jakarta residents still pump because the piped network leaves gaps.</p>
+                                </div>
+                                <div>
+                                    <h3>Map before building</h3>
+                                    <p>Find the fastest-sinking zones before placing roads, rail and housing on them.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== NEW: Mitigation and solutions ===== -->
+            <section class="sec" id="solutions" aria-labelledby="h-sol">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Mitigation and solutions</p><h2 id="h-sol">What can be done in Hagonoy</h2></div>
+                        <p>Subsidence is slow and mostly permanent, so action means stopping the cause and living safely with the loss.</p>
+                    </div>
+                    <div class="cols3">
+                        <div><h3>Community actions</h3><ul>
+                            <li>Report cracks, tilting and flooding using the form below.</li>
+                            <li>Save water at home and fix leaks.</li>
+                            <li>Keep canals and drains free of garbage.</li>
+                            <li>Join barangay clean-ups and disaster drills.</li></ul></div>
+                        <div><h3>Government initiatives</h3><ul>
+                            <li>Enforce water permits and well metering under the Water Code (NWRB).</li>
+                            <li>Build and inspect flood control works, with public checks on quality.</li>
+                            <li>Map subsidence with satellite data before approving roads and housing.</li>
+                            <li>Expand safe piped water so households need fewer wells.</li></ul></div>
+                        <div><h3>Sustainable practices</h3><ul>
+                            <li>Rainwater harvesting for non-drinking use.</li>
+                            <li>Protect mangroves and wetlands that slow tides.</li>
+                            <li>Build homes on raised, flood-ready foundations.</li>
+                            <li>Use surface water instead of deep wells, as Tokyo did.</li></ul></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== NEW: Quiz + FAQ ===== -->
+            <section class="sec sec--alt" id="quiz" aria-labelledby="h-quiz">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Interactive feature</p><h2 id="h-quiz">Test what you know</h2></div>
+                        <p>Six questions. You get feedback after each answer.</p>
+                    </div>
+                    <div class="quiz" id="quiz-box"><noscript>Please enable JavaScript to use the quiz.</noscript></div>
+                    <div class="faq">
+                        <details><summary>Is Hagonoy sinking because of climate change?</summary><p>Sea level rise adds to flooding, but subsidence is a separate process driven mainly by groundwater pumping and soil compaction. The two combine.</p></details>
+                        <details><summary>Can the ground rise again?</summary><p>Rarely. Compacted clay mostly stays compact, so prevention matters more than repair.</p></details>
+                        <details><summary>Is it safe to stop using my well?</summary><p>Only if you have safe piped water. Check with your water provider and barangay before changing your supply.</p></details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== NEW: Community feedback form ===== -->
+            <section class="sec" id="report" aria-labelledby="h-rep">
+                <div class="wrap">
+                    <div class="head">
+                        <div><p class="eyebrow">Community feedback</p><h2 id="h-rep">Report what you see</h2></div>
+                        <p>Prototype form. Replace it with your Google Form embed when ready (see the note below the form).</p>
+                    </div>
+                    <form class="form" id="report-form">
+                        <label>Name (optional)<input name="name" type="text" autocomplete="name"></label>
+                        <label>Barangay<select name="brgy" required>
+                            <option value="">Choose one</option><option>San Sebastian</option><option>San Nicolas</option><option>Malis</option><option>Bulusan</option><option>Frances</option><option>Santo Niño</option><option>Other barangay</option></select></label>
+                        <label>What did you observe?<select name="type" required>
+                            <option value="">Choose one</option><option>Cracked house or road</option><option>Flooding</option><option>Tilting structure</option><option>Well or groundwater concern</option><option>Other concern</option></select></label>
+                        <label>Details<textarea name="msg" rows="4" required></textarea></label>
+                        <button class="btn" type="submit">Submit report</button>
+                    </form>
+                    <p class="form__ok" id="report-ok" tabindex="-1" role="status" hidden></p>
+                    <p class="note">To use Google Forms: create the form, choose Send, then Embed, and paste the iframe in place of this form.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="sources" id="sources">
+            <div class="wrap">
+                <p class="tag">References</p>
+                <ul>
+                    <li><a href="https://water.usgs.gov/ogw/pubs/fs00165/">USGS Fact Sheet 165-00, Land subsidence in the United States</a></li>
+                    <li><a href="https://www.preventionweb.net/news/global-map-shows-nineteen-percent-global-population-may-face-high-probability-subsidence">PreventionWeb, global subsidence map</a></li>
+                    <li><a href="https://eos.org/research-spotlights/the-looming-crisis-of-sinking-ground-in-mexico-city">Eos, sinking ground in Mexico City</a></li>
+                    <li><a href="https://asianews.network/jakarta-sinks-deeper-as-subsidence-worsens-flood-risks">Asia News Network, Jakarta subsidence</a></li>
+                    <li><a href="https://newsinfo.inquirer.net/1121449/sinking-ph-areas-slow-onset-disaster">Inquirer (AFP), sinking areas in the Philippines</a></li>
+                    <li><a href="https://en.antaranews.com/news/141970/cues-taken-from-tokyo-to-address-land-subsidence-in-jakarta">Antara, lessons from Tokyo for Jakarta</a></li>
+                </ul>
+
+                <h4>Hagonoy sources (APA 7th edition)</h4>
+                <ul class="apa">
+                    <li>Maclang, J. D. C., Narca, A. M. Y., Reyes, R. B., &amp; Mabaquiao, L. C. S. (2026). Correlation of land subsidence with groundwater extraction and urbanization in Hagonoy and Calumpit, Bulacan from 2015 to 2021-Q1. <i>ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, X-5/W4-2025</i>, 307. <a href="https://doi.org/10.5194/isprs-annals-X-5-W4-2025-307-2026">https://doi.org/10.5194/isprs-annals-X-5-W4-2025-307-2026</a></li>
+                    <li>GMA Network. (n.d.). <i>Issue ng Bayan: The ghosts of Bulacan</i>. <a href="https://www.gmanetwork.com/news/publicaffairs/content/963611/issue-ng-bayan-the-ghosts-of-bulacan/story">https://www.gmanetwork.com/news/publicaffairs/content/963611/issue-ng-bayan-the-ghosts-of-bulacan/story</a></li>
+                    <li>Reyes-Estrope, C. (2025). In flooded Philippine town, the dead need dry ground. <i>Asia News Network</i>. <a href="https://asianews.network/in-flooded-philippine-town-the-dead-need-dry-ground/">https://asianews.network/in-flooded-philippine-town-the-dead-need-dry-ground/</a></li>
+                    <li>Khaleej Times. (n.d.). <i>Historic Philippine towns face worsening floods despite billions spent in projects</i>. <a href="https://www.khaleejtimes.com/asia/historic-philippine-towns-face-worsening-floods-despite-billions-spent-in-projects">https://www.khaleejtimes.com/asia/historic-philippine-towns-face-worsening-floods-despite-billions-spent-in-projects</a></li>
+                    <li>U.S. Geological Survey. (2000). <i>Land subsidence in the United States</i> (Fact Sheet 165-00). <a href="https://water.usgs.gov/ogw/pubs/fs00165/">https://water.usgs.gov/ogw/pubs/fs00165/</a></li>
+                </ul>
+                <p class="fine">Rates and totals come from different years and methods, so compare shapes and scale, not exact rank. Add authors and dates for the (n.d.) items before submitting.</p>
+            </div>
+        </footer>
+
+        <script>
+            (function () {
+            var box = document.getElementById('nav-toggle');
+            if (!box) return;
+            document.querySelectorAll('.nav a').forEach(function (a) {
+                a.addEventListener('click', function () { box.checked = false; });
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') box.checked = false;
+            });
+            })();
+        </script>
+        <script src="hagonoy.js"></script>
+
+    </body>
+</html>
