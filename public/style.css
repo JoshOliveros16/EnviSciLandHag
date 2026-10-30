@@ -412,3 +412,16 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   .sec, .sec--alt { background: none; padding-block: 1.5rem; break-inside: avoid-page; }
   a { color: inherit; }
 }
+
+/* ================= Scene illustrations ================= */
+:root { --leaf: #4F8A5B; --leaf2: #386B47; }
+.k-sky { fill: var(--sky); } .k-sand { fill: var(--sand); } .k-clay { fill: var(--clay); }
+.k-rock { fill: var(--rock); } .k-water { fill: var(--water); } .k-leaf { fill: var(--leaf); }
+.k-leaf2 { fill: var(--leaf2); } .k-surf { fill: var(--surface); } .k-fg { fill: var(--fg); }
+.k-pink { fill: var(--pink); } .k-cloud { fill: var(--surface); opacity: .85; }
+.s-out { stroke: var(--fg); stroke-width: 2; stroke-linejoin: round; }
+.l-fg { stroke: var(--fg); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.l-wave { stroke: var(--surface); fill: none; stroke-width: 1.8; opacity: .75; stroke-linecap: round; }
+.l-tide { stroke: var(--pink); stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+.panel--wide { grid-column: 1 / -1; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.panel--wide figcaption { max-width: 40rem; }
