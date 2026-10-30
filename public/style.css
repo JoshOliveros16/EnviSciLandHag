@@ -382,3 +382,33 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .form__ok[hidden] { display: none; }
 .sources h4 { font: 500 .75rem/1.2 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--pink); margin: 2rem 0 0; }
 .sources .apa li { padding-left: 2rem; text-indent: -2rem; }
+/* ================= Polish ================= */
+/* Skip link */
+.skip { position: absolute; left: .75rem; top: -4rem; z-index: 40; background: var(--fg); color: var(--bg); padding: .7rem 1rem; font: 500 .8rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
+.skip:focus { top: .75rem; color: var(--bg); }
+
+/* Nav: one row on desktop, brand and Menu button on one row on phones */
+@media (min-width: 1040px) {
+  .nav__in { flex-wrap: nowrap; }
+  .nav__brand { flex: none; font-size: 1.2rem; }
+  .nav__list { flex: 1 1 auto; flex-wrap: nowrap; justify-content: flex-end; }
+  .nav__list a { padding: 1.05rem .45rem; white-space: nowrap; }
+}
+@media (max-width: 639px) {
+  .nav__brand { font-size: 1.05rem; }
+}
+
+/* Depth chart */
+.depth__ruler span:first-child { transform: translateY(-115%); }
+.depth__val { white-space: nowrap; }
+.depth__val--long { font-size: clamp(1rem, 4vw, 2.8rem); }
+
+/* Back to top */
+.top { margin-top: 2rem; font: 500 .8rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; }
+
+/* Print: drop interactive bits */
+@media print {
+  .nav, .skip, #map, #quiz, #report, .top { display: none; }
+  .sec, .sec--alt { background: none; padding-block: 1.5rem; break-inside: avoid-page; }
+  a { color: inherit; }
+}
